@@ -26,8 +26,7 @@ the image is unable to upload due to some issues but i try uploading by dragging
 
 ##### Executing
 using Postman using in CRUD
-this method stand for Create, Read, Update,Delete. 
-befor continue, there are a few thing has to be done constantly, for example Excuting sts, refreshing MySQL droping the Account and Customer Tabel constanting before Executing of runing STS also never repeatativtly runing spring boot application as it will use the same port and casue a error. also make sure port 8080 is always available.   
+this method stand for Create, Read, Update,Delete.  
 ### Add Account.
 <p align="center">
 	<img src="image/addaccount.jpg" width="100px" height="100px">
@@ -49,7 +48,7 @@ the image can be find in the image file for some reason is unable to properly sh
 <p align="center">
 	<img src="image/Screenshot(76).jpg" width="100px" height="100px">
 </p> 
-##### Juint testing 
+#### Juint testing 
 CustomerController test
 <p align="center">
 	<img src="image/Screenshot(71).jpg" width="100px" height="100px">
@@ -58,15 +57,43 @@ CustomerController test
 this test is used to check the rest controller is initialised
 
 ### CRUDE test 
-this is a test that create a 
+this is a test that create a failed to profrom because it was unable to collect to the X.sql data base which is assigned to 
+<p align="center">
+	<img src="image/Screenshot(67).jpg" width="100px" height="100px">
+</p> 
+
+###### instruction for executing project
+there are a few thing has to be done constantly, for example Excuting sts, refreshing MySQL droping the Account and Customer Tabel constanting before Executing of runing STS also never repeatativtly runing spring boot application as it will use the same port and casue a error. also make sure port 8080 is always available.  
+### code for add in Postman
+{
+    "accountBalance": 450,
+    "accountName": "jason account",
+    "numAccount": 2
+}
+
+### request for deleting account
+localhost:8080/deleteAccount/1
+### update Account 
+localhost:8080/updateAccount/2
+{
+    "accountBalance": 450,
+    "accountName": "jason account",
+    "numAccount": 2
+}
+### read all account 
+localhost:8080/allAccount
+###### 
+in future i would like to find out the reason why the image is not uploading it the README file and make sure that i fix the issue with the Junit CRUD test, also consider linking account balance to a third table so it would contain with draw and depositing money, i would also consider making add more example code to the read me file so it can demenstrate other freaure of this project 
 
 
 
 
-tool used:
-*java
-*sprint BOot (STS4)
-*MySQL
-*Maven
-*GitHub
-*git
+
+tool used :-
+* java
+* sprint BOot (STS4)
+* MySQL
+* Maven
+* GitHub
+* git
+
