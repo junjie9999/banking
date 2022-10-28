@@ -12,7 +12,7 @@ this process would also be proformed on the customer table as well
 
 the structure of the table 
 <p align="center">
-	<img src="images/Screenshot(72).png" width="500" height="500">
+	<img src="images/Screenshot (74).png" width="900px" height="600px">
 </p>
 
 
