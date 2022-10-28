@@ -24,10 +24,11 @@ the structure of the table
 </P>
 the image is unable to upload due to some issues but i try uploading by dragging into the the README file try to upload it this way, but it you want to view the image is Screenshot (76) in the images file. 
 
-### Executing
+##### Executing
 using Postman using in CRUD
-this method stand for Create, Read, Update,Delete
-### the first add an Account.
+this method stand for Create, Read, Update,Delete. 
+befor continue, there are a few thing has to be done constantly, for example Excuting sts, refreshing MySQL droping the Account and Customer Tabel constanting before Executing of runing STS also never repeatativtly runing spring boot application as it will use the same port and casue a error. also make sure port 8080 is always available.   
+### Add Account.
 <p align="center">
 	<img src="image/addaccount.jpg" width="100px" height="100px">
 </p>
@@ -37,7 +38,27 @@ image is is uable to load for some reason but the image is contain in the images
 	<img src="image/delete_account.jpg" width="100px" height="100px">
 </p>
 it show that by using delete in Postman request the account has being removes from Account Databas which while using this request 
+### update account 
+this is an put request under Postman which use to update entry in the account table 
+<p align="center">
+	<img src="image/update_account.jpg" width="100px" height="100px">
+</p>
+the image can be find in the image file for some reason is unable to properly showed but if more information is need the iamge is named update_account 
+ ### readAll Account 
+ this is an get request in Postman that directly extract information in the table but the problem of this request is that it can only be view using a localhost:8080/addAccount in an web browser
+<p align="center">
+	<img src="image/Screenshot(76).jpg" width="100px" height="100px">
+</p> 
+##### Juint testing 
+CustomerController test
+<p align="center">
+	<img src="image/Screenshot(71).jpg" width="100px" height="100px">
+</p> 
 
+this test is used to check the rest controller is initialised
+
+### CRUDE test 
+this is a test that create a 
 
 
 
