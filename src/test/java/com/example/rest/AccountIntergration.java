@@ -31,7 +31,7 @@ import com.example.persistence.domain.Account;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-@Sql(scripts = "classpath:person-data.sql", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+@Sql(scripts = "classpath:project.sql", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 public class AccountIntergration {
 
 	@Autowired
@@ -44,48 +44,48 @@ public class AccountIntergration {
 
 	private final Account TEST_SAVED_ACCOUNT = new Account(1L,2000,234567,"kate" , null);
 
-//	@Test
-//	public void testCreate() throws JsonProcessingException, Exception {
-//		String resultString = this.mockMVC
-//				.perform(post("/account/createAccount").contentType(MediaType.APPLICATION_JSON)
-//						.content(this.mapper.writeValueAsString(TEST_ACCOUNT)))
-//				.andExpect(status().isCreated()).andReturn().getRequest().getContentAsString();
-//
-//		Account result = this.mapper.readValue(resultString, Account.class);
-//		assertThat(result).isEqualTo(TEST_ACCOUNT);
-//	}
-//
-//	@Test
-//	public void testReadOne() throws Exception {
-//		this.mockMVC.perform(get("/account/readall/1")).andExpect(status().isOk())
-//				.andExpect(content().json(this.mapper.writeValueAsString(TEST_SAVED_ACCOUNT)));
-//
-//	}
-//
-//	@Test
-//	public void testZZZ() throws Exception {
-//		final List<Account> ACCOUNT = new ArrayList<>();
-//		ACCOUNT.add(TEST_SAVED_ACCOUNT);
-//
-//		final String resultString = this.mockMVC
-//				.perform(request(HttpMethod.GET, "/account/readAll").accept(MediaType.APPLICATION_JSON))
-//				.andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
-//
-//		List<Account> results = Arrays.asList(mapper.readValue(resultString, Account[].class));
-//		assertThat(results).contains(this.TEST_ACCOUNT).hasSize(3);
-//	}
-//
-//	@Test
-//	public void testUpdate() throws Exception {
-//		final Account newAccount = new Account(null,2000,234567,"kate" , null);
-//		String resultString = this.mockMVC
-//				.perform(put("/person/updateAccount/3").contentType(MediaType.APPLICATION_JSON)
-//						.content(this.mapper.writeValueAsString(newAccount)))
-//				.andExpect(status().isAccepted()).andReturn().getRequest().getContentAsString();
-//
-//		Account result = this.mapper.readValue(resultString, Account.class);
-//		assertThat(result).isEqualTo(newAccount);
-//	}
+	@Test
+	public void testCreate() throws JsonProcessingException, Exception {
+		String resultString = this.mockMVC
+				.perform(post("/account/createAccount").contentType(MediaType.APPLICATION_JSON)
+						.content(this.mapper.writeValueAsString(TEST_ACCOUNT)))
+				.andExpect(status().isCreated()).andReturn().getRequest().getContentAsString();
+
+		Account result = this.mapper.readValue(resultString, Account.class);
+		assertThat(result).isEqualTo(TEST_ACCOUNT);
+	}
+
+	@Test
+	public void testReadOne() throws Exception {
+		this.mockMVC.perform(get("/account/readall/1")).andExpect(status().isOk())
+				.andExpect(content().json(this.mapper.writeValueAsString(TEST_SAVED_ACCOUNT)));
+
+	}
+
+	@Test
+	public void testZZZ() throws Exception {
+		final List<Account> ACCOUNT = new ArrayList<>();
+		ACCOUNT.add(TEST_SAVED_ACCOUNT);
+
+		final String resultString = this.mockMVC
+				.perform(request(HttpMethod.GET, "/account/readAll").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
+
+		List<Account> results = Arrays.asList(mapper.readValue(resultString, Account[].class));
+		assertThat(results).contains(this.TEST_ACCOUNT).hasSize(3);
+	}
+
+	@Test
+	public void testUpdate() throws Exception {
+		final Account newAccount = new Account(null,2000,234567,"kate" , null);
+		String resultString = this.mockMVC
+				.perform(put("/person/updateAccount/3").contentType(MediaType.APPLICATION_JSON)
+						.content(this.mapper.writeValueAsString(newAccount)))
+				.andExpect(status().isAccepted()).andReturn().getRequest().getContentAsString();
+
+		Account result = this.mapper.readValue(resultString, Account.class);
+		assertThat(result).isEqualTo(newAccount);
+	}
 
 	@Test
 	public void testDelete() throws Exception {
