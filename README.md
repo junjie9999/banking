@@ -12,7 +12,7 @@ this process would also be proformed on the customer table as well
 
 the structure of the table 
 <p align="center">
-	<img src="image/screenshot(72).png" width="100px" height="100px">
+	<img src="images/screenshot(72).png" width="100px" height="100px">
 </p>
 
 
@@ -29,29 +29,29 @@ using Postman using in CRUD
 this method stand for Create, Read, Update,Delete.  
 ### Add Account.
 <p align="center">
-	<img src="image/addaccount.jpg" width="100px" height="100px">
+	<img src="images/addaccount.jpg" width="100px" height="100px">
 </p>
 image is is uable to load for some reason but the image is contain in the images file named addaccount.jpg. it show and account has being add from the resopens from Postman and MySQL data base.
 ### delete account
 <p align="center">
-	<img src="image/delete_account.jpg" width="100px" height="100px">
+	<img src="images/delete_account.jpg" width="100px" height="100px">
 </p>
 it show that by using delete in Postman request the account has being removes from Account Databas which while using this request 
 ### update account 
 this is an put request under Postman which use to update entry in the account table 
 <p align="center">
-	<img src="image/update_account.jpg" width="100px" height="100px">
+	<img src="images/update_account.jpg" width="100px" height="100px">
 </p>
 the image can be find in the image file for some reason is unable to properly showed but if more information is need the iamge is named update_account 
  ### readAll Account 
  this is an get request in Postman that directly extract information in the table but the problem of this request is that it can only be view using a localhost:8080/addAccount in an web browser
 <p align="center">
-	<img src="image/Screenshot(76).jpg" width="100px" height="100px">
+	<img src="images/Screenshot(76).jpg" width="100px" height="100px">
 </p> 
 #### Juint testing 
 CustomerController test
 <p align="center">
-	<img src="image/Screenshot(71).jpg" width="100px" height="100px">
+	<img src="images/Screenshot(71).jpg" width="100px" height="100px">
 </p> 
 
 this test is used to check the rest controller is initialised
@@ -59,7 +59,7 @@ this test is used to check the rest controller is initialised
 ### CRUDE test 
 this is a test that create a failed to profrom because it was unable to collect to the X.sql data base which is assigned to 
 <p align="center">
-	<img src="image/Screenshot(67).jpg" width="100px" height="100px">
+	<img src="images/Screenshot(67).jpg" width="100px" height="100px">
 </p> 
 
 ###### instruction for executing project
