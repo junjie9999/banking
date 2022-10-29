@@ -66,9 +66,9 @@ this test is used to check the rest controller is initialised
 ### CRUDE test 
 the main purpose of this test is to create a automation Database which contain some data which allow the test to be perform while not effecting any MySQL data, in this test it is require to creat the a src/test/sql and project.sql file which contain some data, 
 <p align="center">
-	<img src="images/Screenshot (67).png" width="900px" height="600px">
+	<img src="images/Screenshot (77).png" width="900px" height="600px">
 </p> 
-the reason the test failed due to the data wasn't inputed in to the right format which cause the error 
+the reason the test failed was due to the data wasn't CRUD input in the AccountIntergration used to test the service was wrong causing a failure rather than an error which suggest that the test code was causing the issue. 
 
 ### Instruction for executing project
 there are a few thing that are very important and has to be constantly aware of, for example Excuting sts, refreshing MySQL droping the Account and Customer Table constanting before Executing of runing STS, this is to ensure that the port wasn't repeatly used and cause compiling error, also never repeatativtly runing spring boot application. also make sure port 8080 or setting the server port in the application.properties  
@@ -93,6 +93,9 @@ localhost:8080/updateAccount/2
 
 ### read all account 
 localhost:8080/allAccount
+### CRUDE test insert command 
+INSERT INTO `account` (Account_Balance, Num_Account, Account_Name) VALUES (2,234567,'kate' ),(23,2345672,'james'),(2000,234567,"john");
+
 
 ###### 
 in future i would like to practise adding images and write more README file to make sure i could get better at it. also i want to make sure make sure that i fix the issue with the my Mockito CRUD test to properly add the data into MySQL manually. in addition to do all the other things i also want to consider linking account to Account Balance creating a third table so it would contain withdraw and depositing money in a new table. i have also consider try to get other response in Postman for example in add a querry in my STS but i was never able to test it out.
