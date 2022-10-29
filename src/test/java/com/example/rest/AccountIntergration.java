@@ -47,7 +47,7 @@ public class AccountIntergration {
 	@Test
 	public void testCreate() throws JsonProcessingException, Exception {
 		String resultString = this.mockMVC
-				.perform(post("/account/createAccount").contentType(MediaType.APPLICATION_JSON)
+				.perform(post("/account/addAccount").contentType(MediaType.APPLICATION_JSON)
 						.content(this.mapper.writeValueAsString(TEST_ACCOUNT)))
 				.andExpect(status().isCreated()).andReturn().getRequest().getContentAsString();
 
@@ -56,7 +56,7 @@ public class AccountIntergration {
 	}
 
 	@Test
-	public void testReadOne() throws Exception {
+	public void testReadAll() throws Exception {
 		this.mockMVC.perform(get("/account/readall/1")).andExpect(status().isOk())
 				.andExpect(content().json(this.mapper.writeValueAsString(TEST_SAVED_ACCOUNT)));
 
@@ -68,7 +68,7 @@ public class AccountIntergration {
 		ACCOUNT.add(TEST_SAVED_ACCOUNT);
 
 		final String resultString = this.mockMVC
-				.perform(request(HttpMethod.GET, "/account/readAll").accept(MediaType.APPLICATION_JSON))
+				.perform(request(HttpMethod.GET, "/account/allAccount").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
 
 		List<Account> results = Arrays.asList(mapper.readValue(resultString, Account[].class));
