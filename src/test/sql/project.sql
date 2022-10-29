@@ -1,1 +1,1 @@
-INSERT INTO `account` (AccountId, accountBalance, numAccount, accountName) VALUES (null,2000,234567,"kate" , null),(1L,2000,234567,"kate" , null)
+INSERT INTO `account`  (Account_Balance, Num_Bccount, Account_Name) VALUES (2,234567,'kate' ),(23,2345672,'james'),(2000,234567,"john");

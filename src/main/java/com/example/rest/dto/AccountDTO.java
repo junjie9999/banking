@@ -13,7 +13,7 @@ public class AccountDTO {
 	@Autowired
     private Long AccountId;
 
-    private int NumAccount;
+    private Integer NumAccount;
     
     private Integer  AccountBalance; 
 

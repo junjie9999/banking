@@ -42,7 +42,7 @@ public class AccountIntergration {
 
 	private final Account TEST_ACCOUNT = new Account(null,2000,234567,"kate" , null);
 
-	private final Account TEST_SAVED_ACCOUNT = new Account(1L,2000,234567,"kate" , null);
+	private final Account TEST_SAVED_ACCOUNT = new Account(1L,2000,234567,"james" , null);
 
 	@Test
 	public void testCreate() throws JsonProcessingException, Exception {
@@ -77,9 +77,9 @@ public class AccountIntergration {
 
 	@Test
 	public void testUpdate() throws Exception {
-		final Account newAccount = new Account(null,2000,234567,"kate" , null);
+		final Account newAccount = new Account(null,2000,234567,"john" , null);
 		String resultString = this.mockMVC
-				.perform(put("/person/updateAccount/3").contentType(MediaType.APPLICATION_JSON)
+				.perform(put("/account/updateAccount/1").contentType(MediaType.APPLICATION_JSON)
 						.content(this.mapper.writeValueAsString(newAccount)))
 				.andExpect(status().isAccepted()).andReturn().getRequest().getContentAsString();
 
