@@ -1,14 +1,16 @@
 # banking_project
-project new
-Overview
-this project is backend of banking app, which is designed to fetch data from MYSQL Database and exposing data using RESTFUL API
+## Junjie Tan 
 
-Feature:-
+### Overview
+this project is backend of banking app, which is designed to fetch data from MYSQL Database and exposing data using RESTFUL API, also performing a Mockito test.
+
+### Feature
 * add an Account
 * read all an Account
 * update Account
 * delete Account
-this process would also be proformed on the customer table as well
+
+this process would also be proformed on the customer table as well if wanted futher detail try looking into the images file it will have the other test done using the CustomerController or service.
 
 the structure of the table 
 <p align="center">
@@ -19,9 +21,9 @@ the structure of the table
 ### Database 
 *below is an ERD diagram for the database table which will show the one to many and many to one relation from Account to Customer 
 <p align="center">
-	<img src="iAmges/Screenshot (57).png" width="900px" height="600px">
+	<img src="iamges/Screenshot (57).png" width="900px" height="600px">
 </P>
-the image is unable to upload due to some issues but i try uploading by dragging into the the README file try to upload it this way, but it you want to view the image is Screenshot (76) in the images file. 
+this image shows the relationship of each table from Account which is one to many and custom is many to one 
 
 ##### Executing
 using Postman using in CRUD
@@ -31,44 +33,47 @@ this method stand for Create, Read, Update,Delete.
 <p align="center">
 	<img src="images/addaccount.jpg" width="900px" height="600px">
 </p>
-image is is uable to load for some reason but the image is contain in the images file named addaccount.jpg. it show and account has being add from the resopens from Postman and MySQL data base.
+this is the Add account request which is called addAccount to create new account using Postman and add to MySQL data base, the addAccount is a PostMapping 
 
-##### Delete Account
+### Delete Account
 <p align="center">
 	<img src="images/delete_account.jpg" width="900px" height="600px">
 </p>
-it show that by using delete in Postman request the account has being removes from Account Databas which while using this request 
+it show that by using delete in Postman request the account has being removes from Account Databas which use the deleteAccount DeleteMapping in STS. 
 
-##### Update account. 
+### Update account. 
 this is an put request under Postman which use to update entry in the account table 
 <p align="center">
 	<img src="images/update_account.jpg" width="900px" height="600px">
 </p>
-the image can be find in the image file for some reason is unable to properly showed but if more information is need the iamge is named update_account 
+this image show the update request generated using Postman using the PutMapping in STS which updates MySQL account Database which can be use to change or add information. 
 
- ##### ReadAll Account. 
- this is an get request in Postman that directly extract information in the table but the problem of this request is that it can only be view using a localhost:8080/addAccount in an web browser
+ ### ReadAll Account. 
+ this is an get request in Postman that directly extract information in the table 
+ 
 <p align="center">
-	<img src="images/Screenshot(76).jpg" width="900px" height="600px">
+	<img src="images/Screenshot (66).jpg" width="900px" height="600px">
 </p> 
+this is a getMapping in STS which the response was unable to generate all the information in the database, but it can be view in a browser using localhost:8080/addAccount
 
-### JUNIT testing 
-CustomerController test
+### JUNIT testing CustomerController test
 <p align="center">
-	<img src="images/Screenshot(71).jpg" width="100px" height="100px">
+	<img src="images/Screenshot (71).jpg" width="900px" height="600px">
 </p> 
 
 this test is used to check the rest controller is initialised
 
 ### CRUDE test 
-this is a test that create a failed to profrom because it was unable to collect to the X.sql data base which is assigned to 
+the main purpose of this test is to create a automation Database which contain some data which allow the test to be perform while not effecting any MySQL data, in this test it is require to creat the a src/test/sql and project.sql file which contain some data, 
 <p align="center">
-	<img src="images/Screenshot(67).jpg" width="100px" height="100px">
+	<img src="images/Screenshot (67).png" width="900px" height="600px">
 </p> 
+the reason the test failed due to the data wasn't inputed in to the right format which cause the error 
 
-###### Instruction for executing project
-there are a few thing has to be done constantly, for example Excuting sts, refreshing MySQL droping the Account and Customer Tabel constanting before Executing of runing STS also never repeatativtly runing spring boot application as it will use the same port and casue a error. also make sure port 8080 is always available.  
-### Code for add in Postman
+### Instruction for executing project
+there are a few thing that are very important and has to be constantly aware of, for example Excuting sts, refreshing MySQL droping the Account and Customer Table constanting before Executing of runing STS, this is to ensure that the port wasn't repeatly used and cause compiling error, also never repeatativtly runing spring boot application. also make sure port 8080 or setting the server port in the application.properties  
+
+### Code for addAccount in Postman
 {
     "accountBalance": 450,
     "accountName": "jason account",
@@ -77,6 +82,7 @@ there are a few thing has to be done constantly, for example Excuting sts, refre
 
 ### request for deleting account
 localhost:8080/deleteAccount/1
+
 ### update Account 
 localhost:8080/updateAccount/2
 {
@@ -84,13 +90,14 @@ localhost:8080/updateAccount/2
     "accountName": "jason account",
     "numAccount": 2
 }
+
 ### read all account 
 localhost:8080/allAccount
+
 ###### 
-in future i would like to find out the reason why the image is not uploading it the README file and make sure that i fix the issue with the Junit CRUD test, also consider linking account balance to a third table so it would contain with draw and depositing money, i would also consider making add more example code to the read me file so it can demenstrate other freaure of this project 
+in future i would like to practise adding images and write more README file to make sure i could get better at it. also i want to make sure make sure that i fix the issue with the my Mockito CRUD test to properly add the data into MySQL manually. in addition to do all the other things i also want to consider linking account to Account Balance creating a third table so it would contain withdraw and depositing money in a new table. i have also consider try to get other response in Postman for example in add a querry in my STS but i was never able to test it out.
 
-
-
+you can check the code in the src main file in this git hub repository 
 
 
 ### Tool used :-
