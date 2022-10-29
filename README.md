@@ -71,7 +71,12 @@ the main purpose of this test is to create a automation Database which contain s
 the reason the test failed was due to the data wasn't CRUD input in the AccountIntergration used to test the service was wrong causing a failure rather than an error which suggest that the test code was causing the issue. 
 
 ### Instruction for executing project
-there are a few thing that are very important and has to be constantly aware of, for example Excuting sts, refreshing MySQL droping the Account and Customer Table constanting before Executing of runing STS, this is to ensure that the port wasn't repeatly used and cause compiling error, also never repeatativtly runing spring boot application. also make sure port 8080 or setting the server port in the application.properties  
+there are a few thing that are very important and has to be constantly aware of, for example:
+
+* Excuting sts, make sure to refreshing MySQL droping the Account and Customer Table before Executing of restarting STS, this is to ensure that the port wasn't repeatly used and cause compiling error.
+* Esure never repeatativtly runing spring boot application. setting the server port in the application.properties.
+* beware of the when naming the entity because STS, Postman and MySQL they unbelievably case senitive so one wrong letter will drive you mad makesure to check the entity name in sql before making a request.
+* always run application on spring boot app rather than Java Application  
 
 ### Code for addAccount in Postman
 {
@@ -97,7 +102,7 @@ localhost:8080/allAccount
 INSERT INTO `account` (Account_Balance, Num_Account, Account_Name) VALUES (2,234567,'kate' ),(23,2345672,'james'),(2000,234567,"john");
 
 
-###### 
+###### Future Revisions
 in future i would like to practise adding images and write more README file to make sure i could get better at it. also i want to make sure make sure that i fix the issue with the my Mockito CRUD test to properly add the data into MySQL manually. in addition to do all the other things i also want to consider linking account to Account Balance creating a third table so it would contain withdraw and depositing money in a new table. i have also consider try to get other response in Postman for example in add a querry in my STS but i was never able to test it out.
 
 you can check the code in the src main file in this git hub repository 
