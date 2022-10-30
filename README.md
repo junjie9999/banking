@@ -4,7 +4,7 @@
 ### Overview
 this project is backend of banking app, which is designed to fetch data from MYSQL Database and exposing data using RESTFUL API, also performing a Mockito test.
 
-### Feature
+##### Feature
 * add an Account
 * read all an Account
 * update Account
@@ -12,19 +12,19 @@ this project is backend of banking app, which is designed to fetch data from MYS
 
 this process would also be proformed on the customer table as well if wanted futher detail try looking into the images file it will have the other test done using the CustomerController or service.
 
-### project structure 
+##### Project structure 
 <p align="center">
 	<img src="images/Screenshot (74).png" width="900px" height="600px">
 </p>
 
 ### Database
-*below is an ERD diagram for the database table which will show the one to many and many to one relation from Account to Customer 
+below is an ERD diagram for the database table which will show the one to many and many to one relation from Account to Customer 
 <p align="center">
 	<img src="iamges/Screenshot (57).png" width="900px" height="600px">
 </P>
 this image shows the relationship of each table, which is designed so one customer would have many accounts.
 
-###### Executing
+### Executing
 using Postman using CRUD
 this method stand for Create, Read, Update,Delete.  
 
@@ -62,15 +62,16 @@ this is a getMapping in STS which the response was unable to generate all the in
 
 this test is used to check the rest controller is initialised
 
-### CRUDE test 
+### CRUDE test
 the main purpose of this test is to create a automation Database which contain some data which allow the test to be perform while not effecting any MySQL data, in this test it is require to creat the a src/test/sql and project.sql file which contain some data, 
 <p align="center">
 	<img src="images/Screenshot (77).png" width="900px" height="600px">
 </p> 
 the reason the test failed was due to the data wasn't CRUD input in the AccountIntergration used to test the service was wrong causing a failure rather than an error which suggest that the test code was causing the issue, but i can manully add to the MySQL database which suggest i didn't connect to the java h2 Database properly which causes the issue.
 <p align="center">
-	<img src="images/Screenshot (77).png" width="900px" height="600px">
+	<img src="images/Screenshot (78).png" width="900px" height="600px">
 </p> 
+which turns out it was add to my main Account database instead. 
 
 ### Instruction for executing project
 there are a few thing that are very important and has to be constantly aware of, for example:
@@ -114,7 +115,7 @@ in future i would like to practise adding images and write more README file to m
 you can check the code in the src main file in this git hub repository 
 
 
-### Tool used :-
+### Tool used :
 * java
 * sprint BOot (STS4)
 * MySQL
