@@ -69,8 +69,9 @@ the main purpose of this test is to create a automation Database which contain s
 </p> 
 the reason the test failed was due to the data wasn't CRUD input in the AccountIntergration used to test the service was wrong causing a failure rather than an error which suggest that the test code was causing the issue, but i can manully add to the MySQL database which suggest i didn't connect to the java h2 Database properly which causes the issue.
 <p align="center">
-	<img src="images/Screenshot (77).png" width="900px" height="600px">
+	<img src="images/Screenshot (78).png" width="900px" height="600px">
 </p> 
+which turns out it was add to my main Account database instead. 
 
 ### Instruction for executing project
 there are a few thing that are very important and has to be constantly aware of, for example:
