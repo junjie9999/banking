@@ -101,6 +101,10 @@ localhost:8080/allAccount
 ### CRUDE test insert command 
 INSERT INTO `account` (Account_Balance, Num_Account, Account_Name) VALUES (2,234567,'kate' ),(23,2345672,'james'),(2000,234567,"john");
 
+### manu sql entery
+INSERT INTO project.account (Account_Balance, Num_Account, Account_Name) VALUES (2,234567,'kate' ),(23,2345672,'james'),(2000,234567,"john");
+
+
 
 ###### Future Revisions
 in future i would like to practise adding images and write more README file to make sure i could get better at it. also i want to make sure make sure that i fix the issue with the my Mockito CRUD test to properly add the data into MySQL manually. in addition to do all the other things i also want to consider linking account to Account Balance creating a third table so it would contain withdraw and depositing money in a new table. i have also consider try to get other response in Postman for example in add a querry in my STS but i was never able to test it out.
