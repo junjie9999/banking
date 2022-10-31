@@ -75,7 +75,7 @@ which turns out it was add to my main Account database instead.
 <p align="center">
 	<img src="images/Screenshot (79).png" width="900px" height="600px">
 </p> 
-after futher test only two out of the four test works 
+after futher test only two out of the four test works with the account integration test code
 
 ### Instruction for executing project
 there are a few thing that are very important and has to be constantly aware of, for example:
